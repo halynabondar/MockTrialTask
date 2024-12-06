@@ -25,7 +25,10 @@
 }
 .star img {
     padding: 10px;
-    object-fit: cover;
+    object-fit: contain;
+}
+.number.selected {
+    background-color: #FC7613;
 }
 .title {
     font-size: 24px;
@@ -49,23 +52,23 @@
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bold;
-
-    &:hover {
-        background-color: #FFFFFF;
-    }
 }
+.number:hover {
+    background-color: #FFFFFF;
+}
+
 .submitBtn {
     background-color: #FC7613;
     border-radius: 15px;
     color: #1d252f;
     padding: 7px;
+    text-align: center;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-
-    &:hover {
-        background-color: #FFFFFF;
-    }
+}
+.submitBtn:hover {
+    background-color: #FFFFFF;
 }
 
 /* ------ */
@@ -80,7 +83,6 @@
     width: 180px;
     border-radius: 15px;
     padding: 5px;
-    /*font-size: 13px;*/
     text-align: center;
     color: #FC7613;
     background-color: #262F38;
