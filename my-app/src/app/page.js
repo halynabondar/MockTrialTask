@@ -6,25 +6,19 @@ import {useRouter} from "next/navigation";
 
 export default function HomePage() {
     const router = useRouter();
-    const [stars, setStars] = useState([]);
+    const [selectedStars, setSelectedStars] = useState(null);
 
     const handleStarClick = (starValue) => {
-        if (stars.includes(starValue)) {
-            setStars(stars.filter((value) => value !== starValue));
-        } else {
-            setStars([...stars, starValue]);
-        }
-        console.log(stars);
+        setSelectedStars(starValue);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (stars.length === 0) {
+        if (!selectedStars) {
             alert("Please select a star rating before submitting.");
         } else {
-            const starsValue = stars.join(",");
-            router.push(`/ThanksPage?stars=${starsValue}`);
+            router.push(`/ThanksPage?stars=${selectedStars}`);
         }
     }
     return (
@@ -41,7 +35,7 @@ export default function HomePage() {
                     {[1, 2, 3, 4, 5].map((num) => (
                         <div
                             key={num}
-                            className={`${styles.number} ${stars.includes(num) ? styles.selected : ""}`}
+                            className={`${styles.number} ${selectedStars === num ? styles.selected : ""}`}
                             onClick={() => handleStarClick(num)}
                         >
                             {num}
