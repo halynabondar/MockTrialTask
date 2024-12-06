@@ -46,11 +46,50 @@
     height: 40px;
     color: #767d87;
     background-color: #262F38;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #FFFFFF;
+    }
 }
 .submitBtn {
     background-color: #FC7613;
     border-radius: 15px;
     color: #1d252f;
-    padding: 5px;
+    padding: 7px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #FFFFFF;
+    }
+}
+
+/* ------ */
+
+.thankYouImage {
+    margin: 10px 0;
+    align-self: center;
+}
+.selectedStars {
+    margin: 10px;
+    align-self: center;
+    width: 180px;
+    border-radius: 15px;
+    padding: 5px;
+    /*font-size: 13px;*/
+    text-align: center;
+    color: #FC7613;
+    background-color: #262F38;
+}
+.titleThanks {
+    font-size: 24px;
+    text-align: center;
+}
+.textThanks {
+    color: #767d87;
+    text-align: center;
 }
