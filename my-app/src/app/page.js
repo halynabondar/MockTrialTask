@@ -1,8 +1,32 @@
-import Image from "next/image";
+"use client"
+
 import styles from "./page.module.css";
+import {useState} from "react";
+import {useRouter} from "next/navigation";
 
-export default function Homepage() {
+export default function HomePage() {
+    const router = useRouter();
+    const [stars, setStars] = useState([]);
 
+    const handleStarClick = (starValue) => {
+        if (stars.includes(starValue)) {
+            setStars(stars.filter((value) => value !== starValue));
+        } else {
+            setStars([...stars, starValue]);
+        }
+        console.log(stars);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (stars.length === 0) {
+            alert("Please select a star rating before submitting.");
+        } else {
+            const starsValue = stars.join(",");
+            router.push(`/ThanksPage?stars=${starsValue}`);
+        }
+    }
     return (
         <div className={styles.container}>
             <div className={styles.item}>
@@ -10,16 +34,23 @@ export default function Homepage() {
                     <img src="/images/icon-star.svg" alt="star"/>
                 </div>
                 <h1 className={styles.title}>How did we do?</h1>
-                <p className={styles.text}>Please let us know how we did with your support request. All feedback is appreciated
+                <p className={styles.text}>Please let us know how we did with your support request. All feedback is
+                    appreciated
                     to help us improve our offering!</p>
                 <div className={styles.numbers}>
-                    <div className={styles.number}>1</div>
-                    <div className={styles.number}>2</div>
-                    <div className={styles.number}>3</div>
-                    <div className={styles.number}>4</div>
-                    <div className={styles.number}>5</div>
+                    {[1, 2, 3, 4, 5].map((num) => (
+                        <div
+                            key={num}
+                            className={`${styles.number} ${stars.includes(num) ? styles.selected : ""}`}
+                            onClick={() => handleStarClick(num)}
+                        >
+                            {num}
+                        </div>
+                    ))}
                 </div>
-                <button className={styles.submitBtn}>Submit</button>
+                <form className={styles.submitBtn} onClick={handleSubmit}>
+                    <button type="button">Submit</button>
+                </form>
             </div>
         </div>
     );
