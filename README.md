@@ -29,4 +29,6 @@ Users can:
 
 ### Screenshot
 
-![](.public/images/image1.png)
+![](my-app/public/images/image1.png)
+![](my-app/public/images/image2.png)
+![](my-app/public/images/image3.png)
