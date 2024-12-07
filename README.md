@@ -29,4 +29,4 @@ Users can:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](.public/images/image1.png)
