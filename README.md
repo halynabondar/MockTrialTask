@@ -7,14 +7,10 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
+[//]: # (  - [What I learned]&#40;#what-i-learned&#41;)
 
 ## Overview
 
@@ -32,3 +28,13 @@ Users can:
 ![](my-app/public/images/image1.png)
 ![](my-app/public/images/image2.png)
 ![](my-app/public/images/image3.png)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
