@@ -10,8 +10,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
 
-[//]: # (  - [What I learned]&#40;#what-i-learned&#41;)
-
 ## Overview
 
 ### The challenge
@@ -36,5 +34,5 @@ Users can:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
+- React
+- Next.js
