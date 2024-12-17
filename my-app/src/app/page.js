@@ -21,6 +21,7 @@ export default function HomePage() {
             router.push(`/ThanksPage?stars=${selectedStars}`);
         }
     }
+
     return (
         <div className={styles.container}>
             <div className={styles.item}>
